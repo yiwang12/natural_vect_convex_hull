@@ -1,4 +1,10 @@
 # protein sequence classification using natural vector and convex hull method
 
-This is a novel protein kinase classification method that considers both domain sequence similarity and whole sequence similarity to quantify the evolutionary distance from a specific protein to a protein family. Using the natural vector method, we establish a 60-dimensional space, where each protein is uniquely represented by a vector. We also define a convex hull, consisting of the natural vectors corresponding to all members of a protein family. The sequence similarity between a protein and a protein family therefore can be quantified as the distance between the protein vector and the protein family convex hull. We have applied this method in a PKC sample library.
+### Transform fasta data to a list containing protein family, full sequence and domain sequence information
+get_info_ncbi.R;	functions_get_info.R
 
+### Using natural vector method, trasfer sequence data to 60-dimentional vector for each protein
+input_seqs.R;nv_cal.R;nv_util.R
+
+### Calculate distance from each protein (60-dimentional vector) to each protein family (convex hull)
+dist_cal.R;function_dist_cal_domain.R
